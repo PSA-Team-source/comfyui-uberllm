@@ -1,0 +1,62 @@
+{
+ "last_node_id": 1,
+ "last_link_id": 0,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "UberLLMTextToVideo",
+   "pos": [
+    60,
+    60
+   ],
+   "size": [
+    420,
+    420
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    },
+    {
+     "name": "file_path",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "name": "cost_usd",
+     "type": "FLOAT",
+     "links": null
+    },
+    {
+     "name": "job_id",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "UberLLMTextToVideo"
+   },
+   "widgets_values": [
+    "fal-ai/veo3.1/fast",
+    "A paper boat drifts down a rain-soaked city gutter at dusk, neon reflections, close-up, slow tracking shot",
+    4,
+    "720p",
+    "16:9",
+    "off",
+    0.5,
+    ""
+   ]
+  }
+ ],
+ "links": [],
+ "groups": [],
+ "config": {},
+ "extra": {},
+ "version": 0.4
+}

@@ -1,0 +1,161 @@
+{
+ "last_node_id": 3,
+ "last_link_id": 2,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "UberLLMImage",
+   "pos": [
+    40,
+    60
+   ],
+   "size": [
+    400,
+    300
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "links": [
+      1,
+      2
+     ],
+     "slot_index": 0
+    },
+    {
+     "name": "cost_usd",
+     "type": "FLOAT",
+     "links": null
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "UberLLMImage"
+   },
+   "widgets_values": [
+    "venice/z-image-turbo",
+    "A glass bottle of cold brew coffee on a wet stone counter, morning light, product photo",
+    "1024x768",
+    1,
+    0.05,
+    ""
+   ]
+  },
+  {
+   "id": 2,
+   "type": "PreviewImage",
+   "pos": [
+    480,
+    60
+   ],
+   "size": [
+    320,
+    300
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 1
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "Node name for S&R": "PreviewImage"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 3,
+   "type": "UberLLMImageToVideo",
+   "pos": [
+    40,
+    420
+   ],
+   "size": [
+    420,
+    440
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 2
+    },
+    {
+     "name": "end_image",
+     "type": "IMAGE",
+     "link": null,
+     "shape": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    },
+    {
+     "name": "file_path",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "name": "cost_usd",
+     "type": "FLOAT",
+     "links": null
+    },
+    {
+     "name": "job_id",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "UberLLMImageToVideo"
+   },
+   "widgets_values": [
+    "fal-ai/kling-video/v3/standard/image-to-video",
+    "Slow push-in, condensation drips down the bottle, steam rises from a cup behind it",
+    3,
+    "auto",
+    "auto",
+    "off",
+    0.5,
+    ""
+   ]
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   2,
+   0,
+   "IMAGE"
+  ],
+  [
+   2,
+   1,
+   0,
+   3,
+   0,
+   "IMAGE"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {},
+ "version": 0.4
+}

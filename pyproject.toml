@@ -1,0 +1,24 @@
+[project]
+name = "comfyui-uberllm"
+version = "1.0.0"
+description = "Make videos (Veo 3.1, Kling, Seedance, Wan, Hailuo, Vidu) and images (Flux, Seedream, Nano Banana) in ComfyUI with your own UberLLM API key. Pay per use from prepaid credit that does not expire."
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+classifiers = [
+    "Operating System :: OS Independent",
+]
+keywords = ["comfyui", "video", "veo", "kling", "seedance", "text-to-video", "image-to-video", "api"]
+
+[project.urls]
+Repository = "https://github.com/PSA-Team-source/comfyui-uberllm"
+Documentation = "https://uberllm.dev/docs/media"
+"Bug Tracker" = "https://github.com/PSA-Team-source/comfyui-uberllm/issues"
+
+[tool.comfy]
+# The publisher must be created on https://registry.comfy.org before the first publish (see README, Publishing).
+PublisherId = "uberllm"
+DisplayName = "UberLLM: video and image models"
+Icon = "https://uberllm.dev/apple-icon"
+requires-comfyui = ">=0.3.31"
